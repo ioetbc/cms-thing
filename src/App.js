@@ -29,7 +29,7 @@ class CMS extends Component {
 
     if (emailMarkdown) {
       console.log('trello', trello)
-      trello.addCard('edit this email', JustTheEmailcontent, '5f2049ef1d997919333e725c',
+      trello.addCard('edit this email', JustTheEmailcontent, process.env.REACT_APP_TRELLO_LIST_ID,
       function (error, trelloCard) {
         if (error) {
             console.log('Could not add card:', error);
